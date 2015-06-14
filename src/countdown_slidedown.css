@@ -1,0 +1,126 @@
+
+.countdown_slidedown .countdown__digit-unit {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	font-size: 1em;
+}
+
+.countdown_slidedown .countdown__digit-unit_hide {
+	position: absolute;
+}
+
+.countdown_slidedown .countdown__digit-unit_hidden {
+	display: none;
+}
+
+
+.countdown_slidedown .countdown__digit-unit-content {
+	display: block;
+	opacity: 0.01;
+}
+
+.countdown_slidedown .countdown__digit-unit:before {
+	position: absolute;
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	top: 50%;
+	left: 50%;
+	
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	        transform: translateX(-50%) translateY(-50%);
+	
+	-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+	        animation-iteration-count: 1;
+	-webkit-animation-name: countdown_slidedown__begin;
+	        animation-name: countdown_slidedown__begin;
+}
+
+.countdown_slidedown .countdown__digit-unit_hide:before {
+	position: absolute;
+	opacity: 0;
+	
+	-webkit-animation-name: countdown_slidedown__end;
+	        animation-name: countdown_slidedown__end;
+}
+
+
+.countdown_slidedown .countdown__group_weeks .countdown__digit-unit,
+.countdown_slidedown .countdown__group_weeks .countdown__digit-unit:before {
+	-webkit-animation-duration: 2.5s;
+	        animation-duration: 2.5s;
+}
+
+.countdown_slidedown .countdown__group_days .countdown__digit-unit,
+.countdown_slidedown .countdown__group_days .countdown__digit-unit:before {
+	-webkit-animation-duration: 2.0s;
+	        animation-duration: 2.0s;
+}
+
+.countdown_slidedown .countdown__group_hours .countdown__digit-unit,
+.countdown_slidedown .countdown__group_hours .countdown__digit-unit:before {
+	-webkit-animation-duration: 1.5s;
+	        animation-duration: 1.5s;
+}
+
+.countdown_slidedown .countdown__group_minutes .countdown__digit-unit,
+.countdown_slidedown .countdown__group_minutes .countdown__digit-unit:before {
+	-webkit-animation-duration: 1.0s;
+	        animation-duration: 1.0s;
+}
+
+.countdown_slidedown .countdown__group_seconds .countdown__digit-unit,
+.countdown_slidedown .countdown__group_seconds .countdown__digit-unit:before {
+	-webkit-animation-duration: 0.5s;
+	        animation-duration: 0.5s;
+}
+
+
+
+@-webkit-keyframes countdown_slidedown__begin {
+	0% {
+		opacity: 1;
+		top: -50%;
+	}
+	100% {
+		opacity: 1;
+		top: 50%;
+	}
+}
+@keyframes countdown_slidedown__begin {
+	0% {
+		opacity: 1;
+		top: -50%;
+	}
+	100% {
+		opacity: 1;
+		top: 50%;
+	}
+}
+
+
+@-webkit-keyframes countdown_slidedown__end {
+	0% {
+		opacity: 1;
+		top: 50%;
+	}
+	100% {
+		opacity: 1;
+		top: 150%;
+	}
+}
+@keyframes countdown_slidedown__end {
+	0% {
+		opacity: 1;
+		top: 50%;
+	}
+	100% {
+		opacity: 1;
+		top: 150%;
+	}
+}

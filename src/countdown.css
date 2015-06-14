@@ -1,0 +1,515 @@
+
+.countdown {
+	display: inline-block;
+	overflow: hidden;
+	padding: 0em;
+	font-size: 80px;
+	font-family: "PT Sans", "Trebuchet MS", Tahoma, sans-serif;
+}
+
+
+.countdown__separator {
+	display: block;
+	float: left;
+	height: 1em;
+	line-height: 0;
+}
+
+.countdown__separator:before {
+	content: ".";
+	display: inline-block;
+	vertical-align: middle;
+	height: 1em;
+	line-height: 1;
+	opacity: 0;
+	width: 0;
+}
+
+.countdown__separator-content  {
+	display: inline;
+	vertical-align: middle;
+	line-height: 0;
+	font-size: 0.5em;
+}
+
+
+
+.countdown__group {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 0.1em;
+}
+
+.countdown__group_hidden {
+	display: none;
+}
+
+.countdown__group_weeks {
+	
+}
+
+.countdown__group_days {
+	
+}
+
+.countdown__group_hours {
+	
+}
+
+.countdown__group_minutes {
+	
+}
+
+.countdown__group_seconds {
+	
+}
+
+.countdown__group-radix {
+	display: block;
+	float: left;
+}
+.countdown__group-radix:before {
+	content: "";
+	display: block;
+	font-size: 0.23em;
+	padding: 3em 0 0.2em 0;
+}
+
+.countdown__group_radix_10 .countdown__group-radix {
+	display: none;
+}
+
+
+.countdown__group-label {
+	display: block;
+	clear: both;
+	font-size: 0.25em;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.countdown__digit {
+	position: relative;
+	display: block;
+	float: left;
+	line-height: 1;
+	/*
+	margin: 0 0.067em 0.1em;
+	border-radius: 0.025em;
+	box-shadow: 0 0 0 0.05em rgba(255, 255, 255, 0.2);
+  */
+}
+
+.countdown__digit_hidden {
+	display: none;
+}
+
+
+.countdown__digit-unit {
+	display: block;
+	overflow: hidden;
+	font-size: 1em;
+}
+.countdown__digit-unit:before {
+	content: "";
+	display: none;
+}
+.countdown__digit-unit:after {
+	content: "";
+	display: none;
+}
+
+.countdown__digit-unit_hide {
+	display: none;
+}
+
+.countdown__digit-unit_hidden {
+	display: none;
+}
+	
+
+.countdown__digit-unit-content {
+	display: block;
+	font-size: 1em;
+}
+.countdown__digit-unit-content:before {
+	content: "";
+	display: block;
+}
+.countdown__digit-unit-content:after {
+	content: "";
+	display: none;
+}
+
+
+
+.countdown__digit-unit:before,
+.countdown__digit-unit:after,
+.countdown__digit-unit-content:before,
+.countdown__digit-unit-content:after {
+	text-transform: uppercase;
+}
+
+
+.countdown__digit-unit_0:before,
+.countdown__digit-unit_0:after,
+.countdown__digit-unit-content_0:before,
+.countdown__digit-unit-content_0:after {
+	content: "0";
+}
+
+.countdown__digit-unit_1:before,
+.countdown__digit-unit_1:after,
+.countdown__digit-unit-content_1:before,
+.countdown__digit-unit-content_1:after {
+	content: "1";
+}
+
+.countdown__digit-unit_2:before,
+.countdown__digit-unit_2:after,
+.countdown__digit-unit-content_2:before,
+.countdown__digit-unit-content_2:after {
+	content: "2";
+}
+
+.countdown__digit-unit_3:before,
+.countdown__digit-unit_3:after,
+.countdown__digit-unit-content_3:before,
+.countdown__digit-unit-content_3:after {
+	content: "3";
+}
+
+.countdown__digit-unit_4:before,
+.countdown__digit-unit_4:after,
+.countdown__digit-unit-content_4:before,
+.countdown__digit-unit-content_4:after {
+	content: "4";
+}
+
+.countdown__digit-unit_5:before,
+.countdown__digit-unit_5:after,
+.countdown__digit-unit-content_5:before,
+.countdown__digit-unit-content_5:after {
+	content: "5";
+}
+
+.countdown__digit-unit_6:before,
+.countdown__digit-unit_6:after,
+.countdown__digit-unit-content_6:before,
+.countdown__digit-unit-content_6:after {
+	content: "6";
+}
+
+.countdown__digit-unit_7:before,
+.countdown__digit-unit_7:after,
+.countdown__digit-unit-content_7:before,
+.countdown__digit-unit-content_7:after {
+	content: "7";
+}
+
+.countdown__digit-unit_8:before,
+.countdown__digit-unit_8:after,
+.countdown__digit-unit-content_8:before,
+.countdown__digit-unit-content_8:after {
+	content: "8";
+}
+
+.countdown__digit-unit_9:before,
+.countdown__digit-unit_9:after,
+.countdown__digit-unit-content_9:before,
+.countdown__digit-unit-content_9:after {
+	content: "9";
+}
+
+.countdown__digit-unit_10:before,
+.countdown__digit-unit_10:after,
+.countdown__digit-unit-content_10:before,
+.countdown__digit-unit-content_10:after {
+	content: "A";
+}
+
+.countdown__digit-unit_11:before,
+.countdown__digit-unit_11:after,
+.countdown__digit-unit-content_11:before,
+.countdown__digit-unit-content_11:after {
+	content: "B";
+}
+
+.countdown__digit-unit_12:before,
+.countdown__digit-unit_12:after,
+.countdown__digit-unit-content_12:before,
+.countdown__digit-unit-content_12:after {
+	content: "C";
+}
+
+.countdown__digit-unit_13:before,
+.countdown__digit-unit_13:after,
+.countdown__digit-unit-content_13:before,
+.countdown__digit-unit-content_13:after {
+	content: "D";
+}
+
+.countdown__digit-unit_14:before,
+.countdown__digit-unit_14:after,
+.countdown__digit-unit-content_14:before,
+.countdown__digit-unit-content_14:after {
+	content: "E";
+}
+
+.countdown__digit-unit_15:before,
+.countdown__digit-unit_15:after,
+.countdown__digit-unit-content_15:before,
+.countdown__digit-unit-content_15:after {
+	content: "F";
+}
+
+.countdown__digit-unit_16:before,
+.countdown__digit-unit_16:after,
+.countdown__digit-unit-content_16:before,
+.countdown__digit-unit-content_16:after {
+	content: "G";
+}
+
+.countdown__digit-unit_17:before,
+.countdown__digit-unit_17:after,
+.countdown__digit-unit-content_17:before,
+.countdown__digit-unit-content_17:after {
+	content: "H";
+}
+
+.countdown__digit-unit_18:before,
+.countdown__digit-unit_18:after,
+.countdown__digit-unit-content_18:before,
+.countdown__digit-unit-content_18:after {
+	content: "I";
+}
+
+.countdown__digit-unit_19:before,
+.countdown__digit-unit_19:after,
+.countdown__digit-unit-content_19:before,
+.countdown__digit-unit-content_19:after {
+	content: "J";
+}
+
+.countdown__digit-unit_20:before,
+.countdown__digit-unit_20:after,
+.countdown__digit-unit-content_20:before,
+.countdown__digit-unit-content_20:after {
+	content: "K";
+}
+
+.countdown__digit-unit_21:before,
+.countdown__digit-unit_21:after,
+.countdown__digit-unit-content_21:before,
+.countdown__digit-unit-content_21:after {
+	content: "L";
+}
+
+.countdown__digit-unit_22:before,
+.countdown__digit-unit_22:after,
+.countdown__digit-unit-content_22:before,
+.countdown__digit-unit-content_22:after {
+	content: "M";
+}
+
+.countdown__digit-unit_23:before,
+.countdown__digit-unit_23:after,
+.countdown__digit-unit-content_23:before,
+.countdown__digit-unit-content_23:after {
+	content: "N";
+}
+
+.countdown__digit-unit_24:before,
+.countdown__digit-unit_24:after,
+.countdown__digit-unit-content_24:before,
+.countdown__digit-unit-content_24:after {
+	content: "O";
+}
+
+.countdown__digit-unit_25:before,
+.countdown__digit-unit_25:after,
+.countdown__digit-unit-content_25:before,
+.countdown__digit-unit-content_25:after {
+	content: "P";
+}
+
+.countdown__digit-unit_26:before,
+.countdown__digit-unit_26:after,
+.countdown__digit-unit-content_26:before,
+.countdown__digit-unit-content_26:after {
+	content: "Q";
+}
+
+.countdown__digit-unit_27:before,
+.countdown__digit-unit_27:after,
+.countdown__digit-unit-content_27:before,
+.countdown__digit-unit-content_27:after {
+	content: "R";
+}
+
+.countdown__digit-unit_28:before,
+.countdown__digit-unit_28:after,
+.countdown__digit-unit-content_28:before,
+.countdown__digit-unit-content_28:after {
+	content: "S";
+}
+
+.countdown__digit-unit_29:before,
+.countdown__digit-unit_29:after,
+.countdown__digit-unit-content_29:before,
+.countdown__digit-unit-content_29:after {
+	content: "T";
+}
+
+.countdown__digit-unit_30:before,
+.countdown__digit-unit_30:after,
+.countdown__digit-unit-content_30:before,
+.countdown__digit-unit-content_30:after {
+	content: "U";
+}
+
+.countdown__digit-unit_31:before,
+.countdown__digit-unit_31:after,
+.countdown__digit-unit-content_31:before,
+.countdown__digit-unit-content_31:after {
+	content: "V";
+}
+
+.countdown__digit-unit_32:before,
+.countdown__digit-unit_32:after,
+.countdown__digit-unit-content_32:before,
+.countdown__digit-unit-content_32:after {
+	content: "W";
+}
+
+.countdown__digit-unit_33:before,
+.countdown__digit-unit_33:after,
+.countdown__digit-unit-content_33:before,
+.countdown__digit-unit-content_33:after {
+	content: "X";
+}
+
+.countdown__digit-unit_34:before,
+.countdown__digit-unit_34:after,
+.countdown__digit-unit-content_34:before,
+.countdown__digit-unit-content_34:after {
+	content: "Y";
+}
+
+.countdown__digit-unit_35:before,
+.countdown__digit-unit_35:after,
+.countdown__digit-unit-content_35:before,
+.countdown__digit-unit-content_35:after {
+	content: "Z";
+}
+
+
+
+.countdown__group_radix_2 .countdown__group-radix:before {
+	content: "2";
+}
+.countdown__group_radix_3 .countdown__group-radix:before {
+	content: "3";
+}
+.countdown__group_radix_4 .countdown__group-radix:before {
+	content: "4";
+}
+.countdown__group_radix_5 .countdown__group-radix:before {
+	content: "5";
+}
+.countdown__group_radix_6 .countdown__group-radix:before {
+	content: "6";
+}
+.countdown__group_radix_7 .countdown__group-radix:before {
+	content: "7";
+}
+.countdown__group_radix_8 .countdown__group-radix:before {
+	content: "8";
+}
+.countdown__group_radix_9 .countdown__group-radix:before {
+	content: "9";
+}
+.countdown__group_radix_10 .countdown__group-radix:before {
+	content: "10";
+}
+.countdown__group_radix_11 .countdown__group-radix:before {
+	content: "11";
+}
+.countdown__group_radix_12 .countdown__group-radix:before {
+	content: "12";
+}
+.countdown__group_radix_13 .countdown__group-radix:before {
+	content: "13";
+}
+.countdown__group_radix_14 .countdown__group-radix:before {
+	content: "14";
+}
+.countdown__group_radix_15 .countdown__group-radix:before {
+	content: "15";
+}
+.countdown__group_radix_16 .countdown__group-radix:before {
+	content: "16";
+}
+.countdown__group_radix_17 .countdown__group-radix:before {
+	content: "17";
+}
+.countdown__group_radix_18 .countdown__group-radix:before {
+	content: "18";
+}
+.countdown__group_radix_19 .countdown__group-radix:before {
+	content: "19";
+}
+.countdown__group_radix_20 .countdown__group-radix:before {
+	content: "20";
+}
+.countdown__group_radix_21 .countdown__group-radix:before {
+	content: "21";
+}
+.countdown__group_radix_22 .countdown__group-radix:before {
+	content: "22";
+}
+.countdown__group_radix_23 .countdown__group-radix:before {
+	content: "23";
+}
+.countdown__group_radix_24 .countdown__group-radix:before {
+	content: "24";
+}
+.countdown__group_radix_25 .countdown__group-radix:before {
+	content: "25";
+}
+.countdown__group_radix_26 .countdown__group-radix:before {
+	content: "26";
+}
+.countdown__group_radix_27 .countdown__group-radix:before {
+	content: "27";
+}
+.countdown__group_radix_28 .countdown__group-radix:before {
+	content: "28";
+}
+.countdown__group_radix_29 .countdown__group-radix:before {
+	content: "29";
+}
+.countdown__group_radix_30 .countdown__group-radix:before {
+	content: "30";
+}
+.countdown__group_radix_31 .countdown__group-radix:before {
+	content: "31";
+}
+.countdown__group_radix_32 .countdown__group-radix:before {
+	content: "32";
+}
+.countdown__group_radix_33 .countdown__group-radix:before {
+	content: "33";
+}
+.countdown__group_radix_34 .countdown__group-radix:before {
+	content: "34";
+}
+.countdown__group_radix_35 .countdown__group-radix:before {
+	content: "35";
+}
+.countdown__group_radix_36 .countdown__group-radix:before {
+	content: "36";
+}
